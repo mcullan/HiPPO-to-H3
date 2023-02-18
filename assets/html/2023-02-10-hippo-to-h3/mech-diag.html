@@ -1,0 +1,147 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+ .mech-image {
+  width: 100%;
+  margin: auto;
+  margin-top: 0px;
+  padding-bottom: 0px;
+ }
+
+ .imgholder {
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+ }
+
+ #gallerywrapper {
+     width:100%;
+     margin:0 auto;
+     position:relative;
+     font-family:verdana, arial, sans-serif;
+ } 
+
+ #gallerywrapper #gallery {
+     position:absolute;
+     left:0;
+     top:0;
+     width:100%;
+     overflow:hidden;
+     text-align:center;
+ } 
+
+ #gallerywrapper #gallery div {
+     width:100%; 
+     padding-top:2px; 
+     position:relative;
+ } 
+
+ #gallerywrapper #gallery div img {
+     clear:both; 
+     display:block; 
+     margin:0 auto; 
+     border:0;
+ } 
+
+ #gallerywrapper #gallery div h3 {
+     padding:10px 0 0 0; 
+     margin:0; 
+     font-size:18px;
+ } 
+
+ #gallerywrapper #gallery div p {
+     padding:5px 0; 
+     margin:0; 
+     font-size:12px; 
+     line-height:18px;
+ } 
+
+ #gallery .previous{ 
+     display:inline;
+     float:left;
+     margin-left:30px;
+     text-decoration:none;
+ } 
+
+ #gallery .next{ 
+     display:inline;
+     float:right;
+     margin-right:30px;
+     text-decoration:none;
+ }
+</style>
+</head>
+<body>
+  <div id="gallerywrapper">
+    <div id="gallery">
+      <div id="pic1" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-01.svg"/>
+        <a class="previous" href="#pic9">&lt;</a>
+        <a class="next" href="#pic2">&gt;</a>
+        <h3>Step 1</h3>
+        <p>Input key "B". The shift matrix encodes that key "B" was input and passes its state to the next step.</p>
+      </div>
+      <div id="pic2" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-02.svg"/>
+        <a class="previous" href="#pic1">&lt;</a>
+        <a class="next" href="#pic3">&gt;</a>
+        <h3>Step 2</h3>
+        <p>Input value "1". The value is converted to binary and stored in the second head of the Diagonal SSM.</p>
+      </div>
+      <div id="pic3" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-03.svg"/>
+        <a class="previous" href="#pic2">&lt;</a>
+        <a class="next" href="#pic4">&gt;</a>
+        <h3>Step 3</h3>
+        <p>Input key "C". The shift matrix encodes that key "C" was input and passes its state to the next step.</p>
+      </div>
+      <div id="pic4" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-04.svg"/>
+        <a class="previous" href="#pic3">&lt;</a>
+        <a class="next" href="#pic5">&gt;</a>
+        <h3>Step 4</h3>
+        <p>Input value "2". The value is converted to binary and stored in the third head of the Diagonal SSM.</p>
+      </div>
+      <div id="pic5" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-05.svg"/>
+        <a class="previous" href="#pic4">&lt;</a>
+        <a class="next" href="#pic6">&gt;</a>
+        <h3>Step 5</h3>
+        <p>Input key "D". The shift matrix encodes that key "D" was input and passes its state to the next step.</p>
+      </div>
+      <div id="pic6" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-06.svg"/>
+        <a class="previous" href="#pic5">&lt;</a>
+        <a class="next" href="#pic7">&gt;</a>
+        <h3>Step 6</h3>
+        <p>Input value "3". The value is converted to binary and stored in the fourth head of the Diagonal SSM.</p>
+      </div>
+      <div id="pic7" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-07.svg"/>
+        <a class="previous" href="#pic6">&lt;</a>
+        <a class="next" href="#pic8">&gt;</a>
+        <h3>Step 7</h3>
+        <p>Input key "A". The shift matrix encodes that key "A" was input and passes its state to the next step.</p>
+      </div>
+      <div id="pic8" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-08.svg"/>
+        <a class="previous" href="#pic7">&lt;</a>
+        <a class="next" href="#pic9">&gt;</a>
+        <h3>Step 8</h3>
+        <p>Input value "0". The value is converted to binary and stored in the second head of the Diagonal SSM. </p>
+      </div>
+      <div id="pic9" class="imgholder">
+        <img class="mech-image" src="../../img/2023-02-10-hippo-to-h3/mechanism/diag-09.svg"/>
+        <a class="previous" href="#pic8">&lt;</a>
+        <a class="next" href="#pic1">&gt;</a>
+        <h3>Step 9</h3>
+        <p>Input key "B". Because the subsequence "B, 1" has been previously entered, the second head of the diagonal SSM lights up with the binary encoding of "1" and sends it to the output. Presuming our decoding step (not pictured) works as intended, this means the model would output "1" on the next step. Thus, we've solved associative memory!</p>
+      </div>
+    </div>
+</div>
+
+</body>
+</html> 
